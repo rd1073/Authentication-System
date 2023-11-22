@@ -24,10 +24,10 @@ const Navbartop = () => {
           <Nav.Link href="/home">Profile</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">Change Password</Nav.Link>
+          <Nav.Link eventKey="link-1">Edit</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2">Tasks</Nav.Link>
+          <Nav.Link eventKey="link-2">Change Password</Nav.Link>
         </Nav.Item>
         <Nav.Item>
            
