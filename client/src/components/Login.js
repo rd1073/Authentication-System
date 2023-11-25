@@ -102,7 +102,9 @@ const Login = () => {
     <Card.Text>
           Don't have an account?
         </Card.Text>
-        <Card.Link href="#">Register Here</Card.Link>
+        <Card.Link href="/register">Register Here</Card.Link>
+        
+        <Card.Link href="/reset">Forgot Password?</Card.Link>
         
       </Card.Body>
     </Card>
