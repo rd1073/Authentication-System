@@ -44,4 +44,4 @@ const userSchema = new mongoose.Schema({
   
   const User = conn.model('User', userSchema);
   
-  module.exports = User;
+  module.exports = { User };
