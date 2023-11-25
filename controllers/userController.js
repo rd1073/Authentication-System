@@ -58,4 +58,39 @@ const registerUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser };
+
+ //login user
+  //api route api/user/login
+  const loginUser = async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      console.log("Request Body:", req.body);
+
+  
+      if (!email || !password) {
+        res.status(400).json({ error: "Please Enter all the Fields" });
+        return;
+      } 
+  
+      // Check if user already exists
+      const user = await User.findOne({ email });
+  
+      if (user && (await bcrypt.compare(password, user.password))) {
+        console.log("login succesful");
+        res.json({
+            _id: user._id,
+            name: user.name,
+            lastname:user.lastname,
+            email: user.email,
+            token: generateToken(user._id),
+          });
+      } else{
+        res.status(401);
+        throw new Error("Invalid Email or Password");
+
+      }
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Server error probably" });
+}};
+module.exports = { registerUser, loginUser };
