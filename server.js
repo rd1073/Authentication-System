@@ -7,7 +7,7 @@ const userRoutes=require("./routes/userRoutes")
 
 const app = express();
 app.use(express.json());
-/*app.use(
+app.use(
     cors({
       origin: "http://localhost:3000",
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -15,7 +15,7 @@ app.use(express.json());
       credentials: true,
     })
   );
-*/
+
 
 app.use("/api/user", userRoutes);
 
