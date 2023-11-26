@@ -99,10 +99,8 @@ const Login = () => {
       </div>
     </Form>
     <p></p>
-    <Card.Text>
-          Don't have an account?
-        </Card.Text>
-        <Card.Link href="/register">Register Here</Card.Link>
+    
+       <Card.Link href="/register">Register Here</Card.Link>
         
         <Card.Link href="/reset">Forgot Password?</Card.Link>
         
